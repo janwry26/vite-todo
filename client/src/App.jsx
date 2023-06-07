@@ -17,7 +17,7 @@ function App() {
   const [todoList, setTodoList] = useState([]);
 
   const getTodoList = () => {
-    axios.get('http://localhost:3001/api/todo/view')
+    axios.get('vite-todo-server.onrender.com:3001/api/todo/view')
     .then((res) => setTodoList(res.data))
     .catch((err) => console.log(err))
   }
@@ -34,7 +34,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3001/api/todo/add', {
+    axios.post('vite-todo-server.onrender.com:3001/api/todo/add', {
       title,
       date
     })
@@ -47,7 +47,7 @@ function App() {
 
   const handleDelete = (e) => {
     e.preventDefault();
-    axios.delete(`http://localhost:3001/api/todo/delete/${id}`)
+    axios.delete(`vite-todo-server.onrender.com:3001/api/todo/delete/${id}`)
     .then((res) => {
       console.log(res);
       window.location.reload();
@@ -56,7 +56,7 @@ function App() {
   }
 
   const handleTransfer = (_id) => {
-    axios.get(`http://localhost:3001/api/todo/view/${_id}`)
+    axios.get(`vite-todo-server.onrender.com:3001/api/todo/view/${_id}`)
     .then((res) => {
       console.log(res);
       window.location.reload();
