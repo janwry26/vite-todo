@@ -10,7 +10,7 @@ import axios from 'axios';
 function App() {
 
   // let serverURL = 'http://localhost:3001';
-  let serverURL = process.env.SERVER_URL;
+  let serverURL = 'https://vite-todo.onrender.com';
 
   const [todoId, setTodoId] = useState(0);
   const hideId = useState(false);
