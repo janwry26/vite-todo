@@ -9,7 +9,8 @@ import axios from 'axios';
 
 function App() {
 
-  let serverURL = 'http://localhost:3001';
+  // let serverURL = 'http://localhost:3001';
+  let serverURL = process.env.SERVER_URL;
 
   const [todoId, setTodoId] = useState(0);
   const hideId = useState(false);
