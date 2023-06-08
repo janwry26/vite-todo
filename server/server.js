@@ -14,6 +14,10 @@ app.use(cors());
 //define routes
 app.use("/api/todo", todoRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Hello to Vite Todo API");
+});
+
 app.listen(PORT, () => {
-    console.log(`Server is running on PORT: ${PORT}`);
+  console.log(`Server is running on PORT: ${PORT}`);
 });
